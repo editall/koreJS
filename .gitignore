@@ -4,3 +4,15 @@
 node_modules
 dist
 .cache
+/.editorconfig
+/.gitattributes
+/.github/workflows/qodana_code_quality.yml
+/.idea/.gitignore
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
+/LICENSE.txt
+/img/.gitkeep
+/package-lock.json
+/qodana.sarif.json
+/qodana.yaml
