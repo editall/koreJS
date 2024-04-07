@@ -1,68 +1,13 @@
-<!doctype html>
-<html class="no-js" lang="">
-
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-  <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="">
-
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
-
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
+    <meta charset="UTF-8">
+    <title>Kore</title>
+    <link rel="stylesheet" href="css/comp.css">
 </head>
-
-<body>
-
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/app.js"></script>
-<script>
-// Kore.Thread.addListener(data=>{
-//   console.log("callback", data);
-// });
-// let i = 0;
-// if(crossOriginIsolated){
-//   while(i++ < 10) Kore.Thread.postBuffer({i, test:"test"});
-// }else{
-//   while(i++ < 10) Kore.Thread.postMessage({i, test:"test"});
-// }
-</script>
-<div id="root">
-</div>
-<script>
-const binder = Kore.binder(10);
-const view = Kore.view(binder, document.querySelector("#root"));
-view.setContent(`<input kore="aa"/>`, view=>{
-  view.sub("aa").setProp("value", "test");
-});
-setTimeout(_=>{
-  view.render(view=>{
-    console.log("value", view.sub("aa"), view.sub("aa").getProp("value"));
-    view.sub("aa").getProp("value");
-  });
-}, 10);
-setTimeout(_=>{
-  view.render(view=>{
-    console.log("value1500", view.sub("aa"), view.sub("aa").getProp("value"));
-    view.sub("aa").getProp("value");
-  });
-}, 1500);
-setTimeout(_=>{
-  view.render(view=>{
-    view.sub("aa").setProp("value", "test2");
-  });
-}, 1000);
-</script>
+<body class="m">
+<div id="app"></div>
+<script type="text/javascript" src="kore.js"></script>
+<script type="text/javascript" src="app.js"></script>
 </body>
-
 </html>
